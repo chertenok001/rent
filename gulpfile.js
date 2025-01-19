@@ -88,18 +88,18 @@ function scripts() {
 
 function images() {
   return src(['app/images/src/*.*','app/images/src/*/*.*', '!app/images/src/*.svg'])
-    .pipe(newer('app/images'))
-    .pipe(avif({
-      quality: 50
-    }))
+    // .pipe(newer('app/images'))
+    // .pipe(avif({
+    //   quality: 50
+    // }))
 
     .pipe(src(['app/images/src/*.*' ,'app/images/src/*/*.*']))
     .pipe(newer('app/images'))
     .pipe(webp())
 
-    .pipe(src(['app/images/src/*.*' ,'app/images/src/*/*.*']))
-    .pipe(newer('app/images'))
-    .pipe(imagemin())
+    // .pipe(src(['app/images/src/*.*' ,'app/images/src/*/*.*']))
+    // .pipe(newer('app/images'))
+    // .pipe(imagemin())
 
     .pipe(dest('app/images'))
 }
@@ -111,7 +111,7 @@ function building() {
       'app/images/*.*',
       'app/images/*/*.*',
       '!app/images/src/*.*',
-      '!app/images/icons/*.svg',
+      'app/images/icons/*.svg',
       'app/images/sprite.svg',
       'app/css/style.min.css',
       'app/js/main.min.js'

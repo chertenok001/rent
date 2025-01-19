@@ -1,12 +1,31 @@
-
 $accent:#FF6838;
+$white:#fff;
+$lightgray:#B2B2B9;
+$pink:#FF285B;
 // $default:#31352B;
 
 
-// %rubik-300 {
-//   font-family: 'Rubik', sans-serif;
-//   font-weight: 300;
-// }
+
+%bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+%roboto-300 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+%roboto-400 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+%roboto-500 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
 
 // %rubik-italic {
 //   font-family: 'Rubik';
@@ -15,9 +34,8 @@ $accent:#FF6838;
 // }
 
 
-// $breakpoints: 
-// ("phone": 560px,
-//   "tablet": 768px,
-//   "laptop": 992px,
-//   "desktop": 1200px,
-//   "l-desktop": 1820px);
+$breakpoints: ("phone": 560px,
+  "tablet": 768px,
+  "laptop": 992px,
+  "desktop": 1200px,
+  "l-desktop": 1820px);

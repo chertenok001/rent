@@ -1,0 +1,46 @@
+.social {
+  display: flex;
+
+  &__list:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &__link {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+    fill: $lightgray;
+    transition: fill 0.5s;
+
+    &--youtube {
+      &:hover {
+        fill: red;
+      }
+    }
+
+    &--facebook {
+      width: 20px;
+      height: 20px;
+
+      &:hover {
+        fill: #23239c;
+      }
+    }
+
+    &--twitter {
+      &:hover {
+        fill: $white;
+      }
+    }
+
+    &--instagram {
+      &:hover {
+        fill: #c70a98;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 32px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-size: 14px;
+    @extend %roboto-300;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $pink;
+    }
+
+    &--active {
+      border-bottom: 2px solid $lightgray;
+    }
+  }
+}

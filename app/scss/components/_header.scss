@@ -1,4 +1,59 @@
+.header {
+  background-color: #212223;
+  color: $lightgray;
 
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  &__top {
+    padding: 12px 0;
+    border-bottom: 1px solid $lightgray;
+  }
 
+  &__top-list {
+    display: flex;
+  }
 
+  &__top-item:not(:last-child) {
+    margin-right: 22px;
+  }
+
+  &__top-link {
+    padding-left: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+    transition: color 0.5s , font-size 0.5s;
+
+    &:hover {
+      color: $pink ;
+      font-size: 15px;
+    }
+
+    &::before {
+      @include pseudo;
+      width: 21px;
+      height: 21px;
+      left: 0;
+      @extend %bg;
+    }
+
+    &--local::before {
+      background-image: url("../images/icons/icon-symbol.svg");
+      width: 15px;
+    }
+
+    &--phone::before {
+      background-image: url("../images/icons/icon-phone.svg");
+    }
+  }
+
+  &__bottom {
+    padding: 30px 0;
+  }
+}
