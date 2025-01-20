@@ -4,10 +4,7 @@ body {
   min-height: 100vh;
   font-size: 16px;
   line-height: 1.5;
-
   @extend %roboto-400;
-  // background-color: $accent;
-
 }
 
 .main {
@@ -33,7 +30,45 @@ body {
   overflow: hidden;
 }
 
+.anm-btn {
+  padding: 12px 20px;
+  background-color: $pink;
+  color: $white;
+  font-size: 14px;
+  width: fit-content;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1;
+}
 
+.title {
+  position: relative;
+  @extend %anton-400;
+  font-size: 62px;
+  line-height: 73px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  padding-top: 25px;
 
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background-color: $pink;
+    top: 0;
+  }
+}
 
+.title-black {
+  color: #000000;
+}
 
+.title-gray {
+  color: $lightgray;
+}
+
+.title-white {
+  color: $white;
+}

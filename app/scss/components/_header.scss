@@ -1,5 +1,9 @@
 .header {
-  background-color: #212223;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
   color: $lightgray;
 
   &__container {
@@ -28,10 +32,10 @@
     align-items: center;
     width: fit-content;
     cursor: pointer;
-    transition: color 0.5s , font-size 0.5s;
+    transition: color 0.5s, font-size 0.5s;
 
     &:hover {
-      color: $pink ;
+      color: $pink;
       font-size: 15px;
     }
 

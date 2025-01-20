@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'Roboto';
   font-weight: 300;
@@ -36,5 +35,16 @@
   src:
     url('../fonts/Roboto-Medium.woff2') format('woff2'),
     url('../fonts/Roboto-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Anton';
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url('../fonts/Anton-Regular.woff2') format('woff2'),
+    url('../fonts/Anton-Regular.woff') format('woff');
   font-display: swap;
 }

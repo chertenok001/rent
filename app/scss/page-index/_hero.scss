@@ -1,0 +1,20 @@
+.hero {
+  color: $lightgray;
+  @extend %bg;
+  // height: 900px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 800px;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $white;
+    line-height: 21px;
+    margin-bottom: 20px;
+  }
+}
