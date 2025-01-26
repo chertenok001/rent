@@ -30,6 +30,10 @@ body {
   overflow: hidden;
 }
 
+.section {
+  padding: 100px 0;
+}
+
 .anm-btn {
   padding: 12px 20px;
   background-color: $pink;
@@ -39,6 +43,7 @@ body {
   text-transform: uppercase;
   white-space: nowrap;
   line-height: 1;
+  border-radius: 2px;
 }
 
 .title {

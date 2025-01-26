@@ -1,0 +1,32 @@
+.about {
+
+  &__box {
+    display: flex;
+
+  }
+
+  &__img:not(:last-child) {
+    margin-right: 100px;
+  }
+
+  &__content {
+
+    padding-top: 40px;
+  }
+
+  &__buttons-group {
+    display: flex;
+  }
+
+  &__btn {
+    margin-right: 10px;
+  }
+
+  &__text {
+    margin-bottom: 28px;
+  }
+
+  &__link {
+    display: block;
+  }
+}
