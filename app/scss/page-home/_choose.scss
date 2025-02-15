@@ -1,0 +1,34 @@
+.choose {
+  background-color: #E5E5E5;
+
+  &__content {
+    width: 100%;
+    max-width: 291px;
+    height: 343px;
+    margin-right: 13px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    background-color: $white;
+    padding: 20px;
+    transition: box-shadow 0.4s;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
