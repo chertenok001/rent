@@ -1,4 +1,10 @@
-const {src, dest, watch, parallel, series} = require('gulp');
+const {
+  src,
+  dest,
+  watch,
+  parallel,
+  series
+} = require('gulp');
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
@@ -77,7 +83,8 @@ function svgSprites() {
 
 function scripts() {
   return src([
-    'node_modules/jquery/dist/jquery.js',
+      'node_modules/jquery/dist/jquery.js',
+      'node_modules/wowjs/dist/wow.js',
       'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
@@ -87,13 +94,13 @@ function scripts() {
 }
 
 function images() {
-  return src(['app/images/src/*.*','app/images/src/*/*.*', '!app/images/src/*.svg'])
+  return src(['app/images/src/*.*', 'app/images/src/*/*.*', '!app/images/src/*.svg'])
     // .pipe(newer('app/images'))
     // .pipe(avif({
     //   quality: 50
     // }))
 
-    .pipe(src(['app/images/src/*.*' ,'app/images/src/*/*.*']))
+    .pipe(src(['app/images/src/*.*', 'app/images/src/*/*.*']))
     .pipe(newer('app/images'))
     .pipe(webp())
 
