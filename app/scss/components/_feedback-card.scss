@@ -1,0 +1,33 @@
+.feedback-card {
+  width: 406px;
+  height: 233px;
+  padding: 44px;
+  background: $white;
+  border-radius: 5px;
+
+  &__blockquote {
+    @include line-clamp(3);
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  &__figure {
+    display: flex;
+  }
+
+  &__img {
+    margin-right: 15px;
+  }
+
+  &__name {
+    @extend %roboto-500;
+    font-size: 16px;
+  }
+
+  &__prof {
+    display: block;
+    @extend %roboto-300;
+    color: $lightgray;
+  }
+}

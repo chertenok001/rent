@@ -11,7 +11,9 @@
     width: 100%;
     max-width: 800px;
     height: 640px;
+    transform: translateY(50px);
   }
+ 
 
   &__box {
     display: flex;
@@ -29,7 +31,7 @@
     grid-gap: 30px 43px;
   }
 
-  &__title {
+  &__name {
     @extend %roboto-500;
     font-size: 18px;
     color: $white;

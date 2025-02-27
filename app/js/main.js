@@ -9,4 +9,14 @@ $(function () {
   })
   wow.init();
 
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.feedback__btn--left',
+      prevEl: '.feedback__btn--right',
+    },
+    mousewheel: true,
+  });
+
 });
