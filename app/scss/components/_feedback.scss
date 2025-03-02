@@ -35,6 +35,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s, border 0.3s, filter 0.3s;
+
+    &:hover {
+      border: 3px solid red;
+      background-color: #fcaeae;
+
+      &::after {
+        filter: invert(93%) sepia(86%) saturate(0%) hue-rotate(169deg) brightness(108%) contrast(101%);
+      }
+    }
+
+    &:disabled {
+      background-color: red;
+      border: transparent;
+    }
 
     &:not(:last-child) {
       margin-right: 10px;
