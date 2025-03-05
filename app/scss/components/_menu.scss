@@ -3,9 +3,64 @@
   justify-content: space-between;
   align-items: center;
 
+  &__btn {
+    display: none;
+
+    @include mq('laptop') {
+      width: 44px;
+      height: 44px;
+      position: relative;
+      display: block;
+      transition: transform 0.5s, width 0.5s, color 0.5s;
+
+      & span,
+      &::after,
+      &::before {
+        @include pseudo;
+        width: 30px;
+        height: 2px;
+        background-color: $white;
+        transform: translateX(9px);
+      }
+
+      &::before {
+        top: 10px;
+      }
+
+      &::after {
+        bottom: 8px;
+      }
+
+      &--active {
+        z-index: 1;
+
+        & span {
+          width: 0;
+          transition: width 0.7s;
+        }
+
+        &::before {
+          transform: rotate(-45deg);
+          top: 22px;
+          transition: all 1s;
+        }
+
+        &::after {
+          transform: rotate(45deg);
+          bottom: 20px;
+          transition: all 1s;
+        }
+      }
+    }
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @include mq('laptop') {
+      display: none;
+    }
   }
 
   &__item:not(:last-child) {

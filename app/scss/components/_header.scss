@@ -5,6 +5,36 @@
   right: 0;
   background-color: transparent;
   color: $lightgray;
+  z-index: 2;
+  padding: 20px 0 10px;
+  width: 100%;
+  transition: padding 0.4s, box-shadow 0.3s, backdrop-filter 0.5s;
+
+  @include mq('laptop') {
+    padding: 0;
+  }
+
+  &--fixed {
+    padding: 0;
+    opacity: 2;
+    box-shadow: rgba(255, 40, 91, 100) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    backdrop-filter: blur(7px);
+
+    & .header__top {
+      padding: 10px 0;
+      border-bottom: 1px solid $pink;
+    }
+
+    & .menu__link {
+      background-image: linear-gradient(#FF285B, $black);
+      background-clip: text;
+      color: transparent;
+    }
+
+    & .header__bottom {
+      padding: 20px 0;
+    }
+  }
 
   &__container {
     display: flex;
@@ -15,6 +45,14 @@
   &__top {
     padding: 12px 0;
     border-bottom: 1px solid $lightgray;
+    transition: transform 0.5s;
+
+    @include mq('laptop') {
+      // transform: translateY(-100px);
+      display: none;
+
+    }
+
   }
 
   &__top-list {
@@ -59,5 +97,16 @@
 
   &__bottom {
     padding: 30px 0;
+    transition: padding 0.5s;
+
+    @include mq('laptop') {
+      padding: 20;
+    }
   }
 }
+
+// $breakpoints: ("phone": 560px,
+//   "tablet": 768px,
+//   "laptop": 992px,
+//   "desktop": 1200px,
+//   "l-desktop": 1820px);
