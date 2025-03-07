@@ -48,11 +48,8 @@
     transition: transform 0.5s;
 
     @include mq('laptop') {
-      // transform: translateY(-100px);
       display: none;
-
     }
-
   }
 
   &__top-list {

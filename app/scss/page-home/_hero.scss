@@ -1,7 +1,22 @@
 .hero {
   color: $lightgray;
   @extend %bg;
-  // height: 900px;
+  &__title{
+    @include mq('laptop'){
+      font-size: 54px;
+    }
+
+    @include mq('tablet'){
+      font-size: 48px;
+      line-height: 64px;
+    }
+
+    @include mq('phone'){
+      font-size: 42px;
+      line-height: 60px;
+    }
+
+  }
 
   &__content {
     display: flex;
