@@ -1,3 +1,5 @@
+@import 'mixin';
+
 body {
   display: flex;
   flex-direction: column;
@@ -75,6 +77,20 @@ body {
   text-transform: uppercase;
   margin-bottom: 50px;
   padding-top: 25px;
+
+  @include mq('laptop') {
+    font-size: 54px;
+  }
+
+  @include mq('tablet') {
+    font-size: 48px;
+    line-height: 64px;
+  }
+
+  @include mq('phone') {
+    font-size: 42px;
+    line-height: 60px;
+  }
 
   &::before {
     content: "";

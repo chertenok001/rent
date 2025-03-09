@@ -1,17 +1,50 @@
 .about {
+  @include mq('tablet') {
+    padding: 70px 0;
+  }
 
   &__box {
     display: flex;
 
+    @include mq('laptop') {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
-  &__img:not(:last-child) {
-    margin-right: 100px;
+  &__img {
+    @include mq('laptop') {
+      opacity: 0.4;
+    }
+
+    @include mq('phone') {
+      display: none;
+    }
+
+    &:not(:last-child) {
+      margin-right: 100px;
+
+      @include mq('laptop') {
+        margin-right: 0;
+      }
+    }
   }
 
   &__content {
-
     padding-top: 40px;
+    max-width: 550px;
+    width: 100%;
+
+    @include mq('laptop') {
+      position: absolute;
+      max-width: 500px;
+    }
+
+    @include mq('phone') {
+      max-width: 300px;
+      padding-bottom: 70px;
+    }
+
   }
 
   &__buttons-group {
@@ -27,10 +60,10 @@
       color: black;
       box-shadow: 0 0 0 1px black;
     }
-
   }
 
   &__text {
+    font-size: 16px;
     margin-bottom: 28px;
   }
 
