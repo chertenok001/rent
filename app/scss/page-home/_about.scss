@@ -1,10 +1,16 @@
 .about {
-  @include mq('tablet') {
-    padding: 70px 0;
+
+  @include mq('laptop') {
+    padding: 60px 0 40px;
+  }
+
+  @include mq('phone') {
+    padding: 40px 0 40px;
   }
 
   &__box {
     display: flex;
+    position: relative;
 
     @include mq('laptop') {
       flex-direction: column;
@@ -17,9 +23,7 @@
       opacity: 0.4;
     }
 
-    @include mq('phone') {
-      display: none;
-    }
+
 
     &:not(:last-child) {
       margin-right: 100px;
@@ -44,7 +48,6 @@
       max-width: 300px;
       padding-bottom: 70px;
     }
-
   }
 
   &__buttons-group {
