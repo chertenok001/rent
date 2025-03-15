@@ -40,34 +40,33 @@ $(function () {
   });
 
 
-    const burger = document.querySelector('.menu__btn');
-    const mobileMenu = document.querySelector('.menu-mobile');
-    const bodyLock = document.querySelector('body');
+  const burger = document.querySelector('.menu__btn');
+  const mobileMenu = document.querySelector('.menu-mobile');
+  const bodyLock = document.querySelector('body');
 
-    if (!burger || !mobileMenu) {
-        console.error();
-        return;
+  if (!burger || !mobileMenu) {
+    console.error();
+    return;
+  }
+
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('menu-mobile--active');
+    burger.classList.toggle('menu__btn--active');
+
+    if (mobileMenu.classList.contains('menu-mobile--active')) {
+      bodyLock.classList.add('lock');
+    } else {
+      bodyLock.classList.remove('lock');
     }
+  });
 
-    burger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('menu-mobile--active');
-        burger.classList.toggle('menu__btn--active');
-
-        if (mobileMenu.classList.contains('menu-mobile--active')) {
-            bodyLock.classList.add('lock');
-        } else {
-            bodyLock.classList.remove('lock');
-        }
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!mobileMenu.contains(e.target) && !burger.contains(e.target)) {
-            mobileMenu.classList.remove('menu-mobile--active');
-            burger.classList.remove('menu__btn--active');
-            bodyLock.classList.remove('lock');
-        }
-    });
-
+  document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !burger.contains(e.target)) {
+      mobileMenu.classList.remove('menu-mobile--active');
+      burger.classList.remove('menu__btn--active');
+      bodyLock.classList.remove('lock');
+    }
+  });
 
 
 

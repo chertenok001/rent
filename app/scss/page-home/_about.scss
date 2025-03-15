@@ -22,9 +22,7 @@
     @include mq('laptop') {
       opacity: 0.4;
     }
-
-
-
+    
     &:not(:last-child) {
       margin-right: 100px;
 
