@@ -7,25 +7,46 @@
   }
 
   &__wrapper {
+    width: 100%;
     display: flex;
+
+    @include mq('desktop') {
+      flex-wrap: wrap;
+    }
   }
 
   &__content {
     max-width: 302px;
     width: 100%;
+
+    @include mq('desktop') {
+      margin-bottom: 30px;
+    }
   }
 
   &__list {
     display: flex;
-    box-sizing: content-box;
+    max-width: 850px;
+
+    @include mq('phone') {
+      max-width: 370px;
+    }
   }
 
   &__item {
-    box-sizing: border-box;
+    max-width: 400px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+      @include mq('phone') {
+       margin-right: 10px;
+      }
+    }
   }
 
   &__box {
     display: flex;
+
   }
 
   &__btn {

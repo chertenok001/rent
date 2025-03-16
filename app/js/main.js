@@ -10,15 +10,15 @@ $(function () {
   wow.init();
 
   const swiper = new Swiper('.swiper', {
-    slidesPerView: 2,
-    spaceBetween: 30,
+    slidesPerView: 1,
+    direction: 'horizontal',
     navigation: {
       nextEl: '.feedback__btn--left',
       prevEl: '.feedback__btn--right',
     },
     mousewheel: true,
   });
-
+ 
 
 
   $(window).on('load', function () {
@@ -32,7 +32,7 @@ $(function () {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 1) {
       $(".header").addClass("header--fixed");
-      localStorage.setIten('isSticky', 'true');
+      localStorage.setItem('isSticky', 'true');
     } else {
       $(".header").removeClass("header--fixed");
       localStorage.setItem('isSticky', 'false');
