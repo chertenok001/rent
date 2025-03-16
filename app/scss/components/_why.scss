@@ -2,6 +2,10 @@
   position: relative;
   @extend %bg;
 
+  @include mq('laptop') {
+    padding: 50px 0;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -12,7 +16,26 @@
     max-width: 800px;
     height: 640px;
     transform: translateY(50px);
-  }
+
+    @include mq('laptop') {
+    max-width: 711px;
+    height: 553px;
+    transform: translateY(-32px);
+    opacity: 0.6;
+    }
+    
+    @include mq('tablet') {
+      max-width: 591px;
+      height: 470px;
+      transform: translateY(56px);
+      opacity: 0.4;
+      }
+
+      @include mq('phone'){
+        max-width: 516px;
+        height: 410px;
+      }
+}
 
   &__box {
     display: flex;
@@ -28,6 +51,12 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px 43px;
+
+        
+    @include mq('phone') {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 70px;
+      }
   }
 
   &__name {
@@ -75,4 +104,5 @@
       background-image: url('../images/sprite.svg#icon-proc');
     }
   }
+
 }
