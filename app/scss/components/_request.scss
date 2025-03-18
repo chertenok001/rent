@@ -12,13 +12,43 @@
     z-index: -1;
   }
 
+  &__info {
+    @include mq('tablet') {
+      position: absolute;
+    }
+  }
+
   &__box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    @include mq('tablet') {
+      justify-items: center
+    }
   }
 
   &__map {
     margin-right: 80px;
+
+    @include mq('laptop') {
+      margin-right: 50px;
+    }
+
+    @include mq('tablet') {
+      display: none;
+    }
+
+    iframe {
+      @include mq('desktop') {
+        width: 400px;
+        height: 400px;
+      }
+
+      @include mq('laptop') {
+        width: 300px;
+        height: 300px;
+      }
+    }
   }
 
   &__title {
@@ -43,6 +73,11 @@
     flex-direction: column;
     width: 370px;
     max-width: 100%;
+
+    @include mq('phone') {
+      width: 300px;
+    }
+
   }
 
   &__input {
