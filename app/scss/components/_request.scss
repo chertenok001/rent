@@ -1,6 +1,9 @@
 .request {
   position: relative;
   color: $white;
+  @include mq('tablet') {
+    padding-bottom: 0;
+  }
 
   &::after {
     @include pseudo;
@@ -14,7 +17,7 @@
 
   &__info {
     @include mq('tablet') {
-      position: absolute;
+      // position: absolute;
     }
   }
 
@@ -64,7 +67,6 @@
     font-size: 14px;
     line-height: 1.4;
     letter-spacing: 0.02em;
-
     margin-bottom: 30px;
   }
 
@@ -77,7 +79,6 @@
     @include mq('phone') {
       width: 300px;
     }
-
   }
 
   &__input {
