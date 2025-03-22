@@ -1,5 +1,11 @@
-@include('components/_head.html')
-@include('components/_header.html')
+@include('components/_head.html', {
+  "pageTitle":"trialem"})
+
+
+
+@include('components/_header.html', {
+  "linkHome":"menu__link--active"
+  })
 
 <main class="main">
   @include('page-home/_hero.html')
