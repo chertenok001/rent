@@ -1,7 +1,14 @@
 @include('components/_head.html', {
-  "pageTitle":"about"})
+"pageTitle":"About"})
 
 @include('components/_header.html', {
-  "linkAbout":"menu__link--active"
-  })
-  
+  "linkAbout": "menu__link--active",
+  "bgSection": "header__about"
+})
+
+<main class="main main--other">
+  @include('page-home/_choose.html')
+  @include('components/_request.html')
+</main>
+@include('components/_footer.html')
+@include('components/_footer-scripts.html')
