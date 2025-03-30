@@ -2,11 +2,12 @@
 "pageTitle":"About"})
 
 @include('components/_header.html', {
-  "linkAbout": "menu__link--active",
-  "bgSection": "header__about"
+"linkAbout": "menu__link--active",
+"bgSection": "header__about"
 })
 
 <main class="main main--other">
+  @include('components/_breadcrumbs.html')
   @include('page-home/_choose.html')
   @include('components/_request.html')
 </main>

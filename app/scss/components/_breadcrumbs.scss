@@ -1,0 +1,39 @@
+.breadcrumbs {
+  padding-block: 20px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    padding-right: 10px;
+    color: #898F99;
+
+    &::after {
+      position: absolute;
+      content: "/";
+      display: block;
+      top: 0;
+      right: 0;
+    }
+
+    &--active {
+      color: $black;
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &__link {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+
+  }
+
+}

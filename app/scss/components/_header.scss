@@ -1,6 +1,4 @@
 .header {
-  background-position: top center;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -10,10 +8,7 @@
   z-index: 2;
   padding: 20px 0 10px;
   width: 100%;
-  transition: padding 0.4s,
-  box-shadow 0.3s,
-  backdrop-filter 0.5s;
-
+  transition: padding 0.4s, box-shadow 0.3s, backdrop-filter 0.5s;
 
   @include mq('laptop') {
     padding: 0;
@@ -105,5 +100,10 @@
     @include mq('laptop') {
       padding: 20;
     }
+  }
+
+  &__about {
+    background-color: #212223;
+    padding:0;
   }
 }
