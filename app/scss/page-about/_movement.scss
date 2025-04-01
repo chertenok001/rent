@@ -1,0 +1,111 @@
+.movement {
+
+  padding: 60px 0 100px;
+
+  @include mq('tablet') {
+    padding: 40px 0 60px;
+  }
+
+  @include mq('phone') {
+    padding: 0 0 20px;
+  }
+
+  &__box {
+    display: flex;
+    position: relative;
+
+    @include mq('laptop') {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    position: relative;
+    aspect-ratio: 599/440;
+    max-width: 599px;
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s, transform 0.5s;
+    border-radius: 10%;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &::before,
+    &::after {
+      @include pseudo;
+    }
+
+    &::before {
+      background-image: url('../images/sprite.svg#icon-play');
+      @extend %bg;
+      width: 82px;
+      height: 82px;
+      filter: invert(99%) sepia(2%) saturate(182%) hue-rotate(165deg) brightness(115%) contrast(100%);
+      z-index: 1;
+      transition: height 0.5s, width 0.5s;
+    }
+
+    &:hover::before {
+      width: 90px;
+      height: 90px;
+    }
+
+    &::after {
+      border-radius: 10%;
+      inset: 0;
+      transition: background-color .5s;
+    }
+
+    &:hover::after {
+      background-color: rgba(0, 0, 0, 0.60);
+    }
+
+    &:not(:last-child) {
+      margin-right: 100px;
+
+      @include mq('laptop') {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 40px;
+    max-width: 550px;
+    width: 100%;
+
+    @include mq('phone') {
+      max-width: 300px;
+      padding-bottom: 70px;
+    }
+  }
+
+  &__buttons-group {
+    display: flex;
+  }
+
+  &__link {
+    display: block;
+    margin-right: 10px;
+
+    &:nth-child(2) {
+      background-color: $white;
+      color: black;
+      box-shadow: 0 0 0 1px black;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  &__link {
+    display: block;
+  }
+}
