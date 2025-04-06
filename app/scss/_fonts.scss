@@ -38,7 +38,6 @@
   font-display: swap;
 }
 
-
 @font-face {
   font-family: 'Anton';
   font-weight: 400;
@@ -46,5 +45,15 @@
   src:
     url('../fonts/Anton-Regular.woff2') format('woff2'),
     url('../fonts/Anton-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: 300;
+  font-style: normal;
+  src:
+    url('../fonts/Lato-light.woff2') format('woff2'),
+    url('../fonts/Lato-light.woff') format('woff');
   font-display: swap;
 }
