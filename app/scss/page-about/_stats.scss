@@ -1,0 +1,54 @@
+.stats {
+  background-color: #381C75;
+
+
+  &__inner {
+    padding-inline: 45px;
+    display: flex;
+  }
+
+  &__num {
+    position: relative;
+    @extend %anton-400;
+    color: $lightgray;
+    font-size: 42px;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    display: block;
+    margin-bottom: 24px;
+
+    &::after {
+      @include pseudo;
+      width: 20px;
+      height: 4px;
+      background-color: red;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__title {
+    @extend %roboto-500;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    color: $white;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    max-width: 270px;
+    width: 100%;
+    padding-inline: 35px;
+    text-align: center;
+  }
+
+  &__text {
+    @extend %roboto-400;
+    font-size: 14px;
+    color: $lightgray;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+  }
+}
