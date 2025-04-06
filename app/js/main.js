@@ -9,6 +9,16 @@ $(function () {
   })
   wow.init();
 
+  wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'advantage-animated',
+    offset: 0,
+    mobile: true,
+    live: true
+  })
+  wow.init();
+
+
   const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     direction: 'horizontal',

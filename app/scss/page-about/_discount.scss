@@ -1,0 +1,19 @@
+.discount {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right right;
+  padding-block: 80px;
+
+  &__content {
+    max-width: 400px;
+    width: 100%;
+    margin-left: auto;
+  }
+
+  &__subject {
+    display: block;
+    color: $lightgray;
+  }
+
+}
