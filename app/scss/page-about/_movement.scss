@@ -21,15 +21,21 @@
   }
 
   &__img {
+    @extend %bg;
     position: relative;
     aspect-ratio: 599/440;
     max-width: 599px;
-    height: 440px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: background-color 0.5s, transform 0.5s;
     border-radius: 10%;
+
+    // @include mq('laptop') {
+    //   max-width: 599px;
+    //   height: 440px;
+    // }
 
     &:hover {
       transform: scale(1.1);
