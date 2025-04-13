@@ -4,6 +4,12 @@
   &__inner {
     padding-inline: 45px;
     display: flex;
+
+    @include mq('laptop') {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 40px;
+    }
   }
 
   &__num {

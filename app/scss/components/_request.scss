@@ -15,10 +15,6 @@
     z-index: -1;
   }
 
-  &__info {
-    @include mq('tablet') {
-    }
-  }
 
   &__box {
     display: grid;

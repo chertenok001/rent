@@ -32,11 +32,6 @@
     transition: background-color 0.5s, transform 0.5s;
     border-radius: 10%;
 
-    // @include mq('laptop') {
-    //   max-width: 599px;
-    //   height: 440px;
-    // }
-
     &:hover {
       transform: scale(1.1);
     }
