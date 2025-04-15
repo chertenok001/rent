@@ -3,7 +3,6 @@
   &__box {
     display: flex;
 
-
     @include mq('tablet') {
       justify-content: center;
     }
