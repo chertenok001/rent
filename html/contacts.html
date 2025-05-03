@@ -1,0 +1,15 @@
+@include('components/_head.html', {
+  "pageTitle":"CONTACTS"})
+  
+  @include('components/_header.html', {
+  "linkContacts": "menu__link--active",
+  "bgSection": "header__about"
+  })
+  
+<main class="main main--other">
+  @include('page-contacts/_breadcrumbs-contacts.html')
+  @include('page-contacts/_contacts.html')
+
+</main>
+@include('components/_footer.html')
+@include('components/_footer-scripts.html')

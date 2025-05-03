@@ -1,0 +1,15 @@
+@include('components/_head.html', {
+"pageTitle":"BICYCLES"})
+
+@include('components/_header.html', {
+"linkBicycles": "menu__link--active",
+"bgSection": "header__about"
+})
+
+<main class="main main--other">
+  @include('page-bicycles/_breadcrumbs-bicycles.html')
+  @include('page-bicycles/_bikes.html')
+
+</main>
+@include('components/_footer.html')
+@include('components/_footer-scripts.html')

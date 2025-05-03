@@ -1,0 +1,18 @@
+@include('components/_head.html', {
+"pageTitle":"SEVICES"})
+
+@include('components/_header.html', {
+"linkServices": "menu__link--active",
+"bgSection": "header__about"
+})
+
+<main class="main main--other">
+  @include('page-services/_breadcrumbs-services.html')
+  @include('page-services/_advantages-services.html')
+  @include('page-home/_rental.html')
+  @include('page-services/_request-services.html')
+  @include('components/_why.html')
+  @include('components/_feedback.html')
+</main>
+@include('components/_footer.html')
+@include('components/_footer-scripts.html')
